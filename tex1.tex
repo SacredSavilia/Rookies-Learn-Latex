@@ -1,0 +1,222 @@
+\documentclass{article}
+
+\usepackage{ctex}
+\usepackage{xltxtra}
+\usepackage{mflogo}
+\usepackage{graphics}
+\usepackage{array}
+%\usepackage[thmmarks]{ntheorem} %定理环境
+\usepackage{amsmath}
+
+\bibliographystyle{plain}
+\graphicspath{{D:/},{pics/}}
+\newcommand\degree{^\circ}
+\title{\songti 第一个文件}
+\date{\today}
+\author{\kaishu 张三}
+
+\newcommand\abc{\text{666666}}
+
+%正文区有且仅有一个document环境
+\begin{document}
+	\maketitle
+	\tableofcontents
+	
+	\section{上下标}
+	\subsection{a}
+	这是一个公式$a_0$：$x^{100}+x+1$\\
+	\subsection{b}
+	这是一个公式$a_1$：\(x^{x+1}+x+1\)\\
+	\subsection{c}
+	这是一个公式$a_2$：\begin{math}
+		x^2+x+1 \end{math}\\
+	\subsection{d}
+	$y = \arcsin^{-1} x$
+	
+	$y = \sqrt{x^{100}+x+1}$
+	
+	$y = \sqrt[4]{x^{100}+x+1}$
+	\subsection{e}
+	$3/4$ $\frac{3}{4}$
+	\subsection{f}
+	这是一个公式：
+	$$\alpha^3 + \beta^3 + \gamma^3 = 0$$
+	
+	这是公式\ref{eq:eq1}：
+	\begin{equation}
+		\alpha^3 + \beta^3 + \gamma^3 = 0 \label{eq:eq1}
+	\end{equation}
+
+	这是公式\ref{eq:eq2}:
+	\begin{equation*}
+	\alpha^3 + \beta^3 + \gamma^3 = 0 \label{eq:eq2}
+	\end{equation*}
+
+	\begin{equation}
+		min \quad f(x)=x_1+x_2
+	\end{equation}
+	$$s.t \quad g_1(x)=4-x_1^2-x_2^2 \ge 0$$
+	
+	\section{d2}
+	$\alpha^3 + \beta^3 + \gamma^3 = 0$ 
+	\section{矩阵}
+	\subsection{a}
+	\[
+	\begin{vmatrix}		%Vv bB ...
+		1 & 0 \\
+		0 & 1
+	\end{vmatrix} \qquad
+	\]
+	\subsection{b}
+	\[
+	\begin{Bmatrix}
+		a_{11}^2 & \dots & a_{1n}^2\\
+		         & \ddots & \vdots\\
+		0        & & a_{nn}^2
+	\end{Bmatrix}_{n \times n}	 \qquad
+	\]
+	\subsection{c}
+	\[
+	\begin{pmatrix}
+	\begin{matrix}
+		1&0 \\
+		0&1
+	\end{matrix}& \text{\Large 0} \\ \text{\Large 1} &
+	\begin{matrix}
+		1&0 \\
+		0&1
+	\end{matrix}
+	\end{pmatrix}
+	\]
+	\subsection{d}
+	\[
+	\begin{bmatrix}
+		a_11&a_12&\dots&a_1n\\
+		&a_22&\dots&a_2n\\
+		& & \ddots&\vdots\\
+		 & & &a_nn	
+	\end{bmatrix}
+	\]
+	\subsection{e}
+	\[
+	\begin{bmatrix}
+		a_11&a_12&\dots&a_1n\\
+		&a_22&\dots&a_2n\\
+		& & \ddots&\vdots\\
+		\multicolumn{2}{c}{\raisebox{1.4ex}[1pt]{\Huge 0} }& &a_nn	
+	\end{bmatrix}
+	\]
+	\subsection{f}
+	\[
+	\begin{bmatrix}
+		1 & \frac{1}{2} & \dots & \frac{1}{n}\\
+		\hdotsfor{4}\\
+		1 & \frac{2}{3} & \dots & \frac{2}{n}
+	\end{bmatrix}
+	\]
+	\subsection{g}
+这是一个矩阵：
+	\begin{math}
+		\left(
+		\begin{smallmatrix}
+			x&y\\z&b
+		\end{smallmatrix}
+		\right)
+	\end{math}
+来表示
+	\subsection{h}
+	\[
+	\begin{array}{c|c}
+		10000&2\\
+		\hline
+		2&\frac{1}{mssdn}
+	\end{array}
+	\]
+	
+	\section{多行公式}
+	\subsection{a}
+	\begin{gather} %带符号
+		a+b=b+a\\
+		ab=ba
+	\end{gather}
+	
+	\begin{gather*}
+	a+b=b+a\\
+	ab=ba
+	\end{gather*}
+
+	\begin{gather}
+		a+b=b+a \notag \\
+		ab=ba \notag
+	\end{gather}
+
+	\subsection{b}
+	
+	\begin{align} % &放在哪，哪里就是正中间
+	y &= x^3 + x^2 + 1\\
+	y = x^3 + &x^2 + 1\\
+	y = x^3 + x^2 + &1\\
+	\end{align}
+
+	\begin{equation}
+		\begin{split}
+			y &= x^3 + x^2 + 1\\
+			&=x^3 + x^2 + 1
+		\end{split}
+	\end{equation}
+
+	\begin{equation}
+		D(x)=\begin{cases}
+			1,&\text{if} \quad x \in \text{D};\\
+			0,&\text{if} \quad x \in \text{B}.
+		\end{cases}
+	\end{equation}
+	\section{参考文献引用}
+	这是一篇参考文献\cite{Lu2018Single}
+	
+	\nocite{*}
+	\bibliography{test}
+	
+	\section{d6}
+	 
+	\texttt{你好}\\
+	\textsf{你好}\\
+	%\includegraphics[scale=0.2]{wallhaven-6o2de6}
+	
+	{\rmfamily glhf}\\ \par{\ttfamily glhf}\\
+	{\tiny This is our homework.}\\
+	{\normalsize This is our homework.}\\
+	\zihao{5} 你好\\
+	\emph{\textit{\textbf{glhf}}}\\
+	\textit{\textbf{glhf}}
+	\quad %一个空格
+	
+	$f(x)=x^3+x^2+1$.
+	$$f(x)=x^3+x^2+1$$
+	$\ C=30\degree$
+	
+	\begin{equation}
+		f(x)=x^2+x+1.
+	\end{equation}
+
+	Hello world!\\
+	
+	\LaTeX{}中的插图\ref{table1}：
+	\begin{table}[t]
+		\centering
+		\caption{ 标题}	\label{table1}
+		\begin{tabular}{|c| c| p{1cm}|}	
+			\hline 
+			姓名 & 性别 & 年龄\\
+			\hline \hline
+			tony & male & 200000000000\\
+			\hline \hline
+			miney & female & 21\\
+			\hline 
+		\end{tabular}
+	\end{table}
+
+	\section{last}
+	\abc
+	
+\end{document}
